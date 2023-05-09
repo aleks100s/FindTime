@@ -1,15 +1,31 @@
+import Deps.Compose.activity
+import Deps.Compose.compiler
+import Deps.Compose.foundation
+import Deps.Compose.foundation_layout
+import Deps.Compose.material
+import Deps.Compose.material_icons_extended
+import Deps.Compose.runtime
+import Deps.Compose.runtime_livedata
+import Deps.Compose.ui
+import Deps.Compose.uiTooling
+import Deps.Compose.uiToolingPreview
+import Versions.compile_sdk
+import Versions.compose_compiler_version
+import Versions.min_sdk
+import Versions.target_sdk
+
 plugins {
-    id("com.android.application")
-    kotlin("android")
+    id(androidApp)
+    kotlin(androidPlugin)
 }
 
 android {
     namespace = "com.alextos.findtime.android"
-    compileSdk = 33
+    compileSdk = compile_sdk
     defaultConfig {
         applicationId = "com.alextos.findtime.android"
-        minSdk = 28
-        targetSdk = 33
+        minSdk = min_sdk
+        targetSdk = target_sdk
         versionCode = 1
         versionName = "1.0"
     }
@@ -17,7 +33,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.0"
+        kotlinCompilerExtensionVersion = compose_compiler_version
     }
     packagingOptions {
         resources {
@@ -40,10 +56,21 @@ android {
 
 dependencies {
     implementation(project(":shared"))
-    implementation("androidx.compose.ui:ui:1.3.1")
-    implementation("androidx.compose.ui:ui-tooling:1.3.1")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.3.1")
-    implementation("androidx.compose.foundation:foundation:1.3.1")
-    implementation("androidx.compose.material:material:1.3.1")
-    implementation("androidx.activity:activity-compose:1.6.1")
+
+    with(Deps) {
+        implementation(material)
+        implementation(napier)
+    }
+
+    implementation(compiler)
+    implementation(runtime)
+    implementation(runtime_livedata)
+    implementation(ui)
+    implementation(uiTooling)
+    implementation(uiToolingPreview)
+    implementation(foundation)
+    implementation(foundation_layout)
+    implementation(material)
+    implementation(material_icons_extended)
+    implementation(activity)
 }

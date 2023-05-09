@@ -9,19 +9,19 @@ object Versions {
     const val target_sdk = 33
     const val compile_sdk = 33
 
-    const val kotlin = "1.7.21"
-    const val kotlin_gradle_plugin = "1.7.21"
+    const val kotlin = "1.8.20"
+    const val kotlin_gradle_plugin = "1.8.20"
     const val android_gradle_plugin = "8.0.1"
     const val desktop_compose_plugin = "1.4.0"
     const val compose_compiler_version = "1.4.0"
     const val compose_version = "1.3.1"
 
-    const val coroutines = "1.5.2-native-mt"
+    const val coroutines = "1.7.0"
     const val junit = "4.13.2"
-    const val material = "1.4.0"
+    const val material = "1.9.0"
     const val kotlinxDateTime = "0.4.0"
-    const val activityCompose = "1.6.1"
-    const val napier = "1.5.0"
+    const val activityCompose = "1.7.1"
+    const val napier = "2.6.1"
     const val junit5 = "1.5.10"
     const val frameworkName = "shared"
 }

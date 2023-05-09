@@ -1,6 +1,3 @@
-import Versions.compile_sdk
-import Versions.min_sdk
-
 plugins {
     kotlin(multiplatform)
     id(androidLib)
@@ -57,8 +54,8 @@ kotlin {
 
 android {
     namespace = "com.alextos.findtime"
-    compileSdk = compile_sdk
+    compileSdk = Versions.compile_sdk
     defaultConfig {
-        minSdk = min_sdk
+        minSdk = Versions.min_sdk
     }
 }

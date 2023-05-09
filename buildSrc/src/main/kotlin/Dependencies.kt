@@ -13,7 +13,7 @@ object Versions {
     const val kotlin_gradle_plugin = "1.8.20"
     const val android_gradle_plugin = "8.0.1"
     const val desktop_compose_plugin = "1.4.0"
-    const val compose_compiler_version = "1.4.0"
+    const val compose_compiler_version = "1.4.6"
     const val compose_version = "1.3.1"
 
     const val coroutines = "1.7.0"

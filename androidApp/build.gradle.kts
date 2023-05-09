@@ -1,19 +1,3 @@
-import Deps.Compose.activity
-import Deps.Compose.compiler
-import Deps.Compose.foundation
-import Deps.Compose.foundation_layout
-import Deps.Compose.material
-import Deps.Compose.material_icons_extended
-import Deps.Compose.runtime
-import Deps.Compose.runtime_livedata
-import Deps.Compose.ui
-import Deps.Compose.uiTooling
-import Deps.Compose.uiToolingPreview
-import Versions.compile_sdk
-import Versions.compose_compiler_version
-import Versions.min_sdk
-import Versions.target_sdk
-
 plugins {
     id(androidApp)
     kotlin(androidPlugin)
@@ -21,11 +5,11 @@ plugins {
 
 android {
     namespace = "com.alextos.findtime.android"
-    compileSdk = compile_sdk
+    compileSdk = Versions.compile_sdk
     defaultConfig {
         applicationId = "com.alextos.findtime.android"
-        minSdk = min_sdk
-        targetSdk = target_sdk
+        minSdk = Versions.min_sdk
+        targetSdk = Versions.target_sdk
         versionCode = 1
         versionName = "1.0"
     }
@@ -33,7 +17,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = compose_compiler_version
+        kotlinCompilerExtensionVersion = Versions.compose_compiler_version
     }
     packagingOptions {
         resources {
@@ -62,15 +46,15 @@ dependencies {
         implementation(napier)
     }
 
-    implementation(compiler)
-    implementation(runtime)
-    implementation(runtime_livedata)
-    implementation(ui)
-    implementation(uiTooling)
-    implementation(uiToolingPreview)
-    implementation(foundation)
-    implementation(foundation_layout)
-    implementation(material)
-    implementation(material_icons_extended)
-    implementation(activity)
+    implementation(Deps.Compose.compiler)
+    implementation(Deps.Compose.runtime)
+    implementation(Deps.Compose.runtime_livedata)
+    implementation(Deps.Compose.ui)
+    implementation(Deps.Compose.uiTooling)
+    implementation(Deps.Compose.uiToolingPreview)
+    implementation(Deps.Compose.foundation)
+    implementation(Deps.Compose.foundation_layout)
+    implementation(Deps.Compose.material)
+    implementation(Deps.Compose.material_icons_extended)
+    implementation(Deps.Compose.activity)
 }

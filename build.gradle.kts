@@ -1,6 +1,7 @@
 buildscript {
     dependencies {
-        classpath("com.android.tools.build:gradle:8.0.1")
+        classpath(Deps.android_gradle_plugin)
+        classpath(Deps.kotlin_gradle_plugin)
     }
 }
 plugins {

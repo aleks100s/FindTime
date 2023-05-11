@@ -56,7 +56,7 @@ object Deps {
     }
 
     object JetBrains {
-        const val dateTime = "org.jetbrains.kotlinx:kotlinx-datetime:${Versions.kotlin}"
+        const val dateTime = "org.jetbrains.kotlinx:kotlinx-datetime:${Versions.kotlinxDateTime}"
         const val uiDesktop = "org.jetbrains.compose.ui:ui-desktop:${Versions.compose_version}"
         const val uiUtil = "org.jetbrains.compose.ui:ui-util:${Versions.compose_version}"
     }

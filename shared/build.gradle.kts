@@ -7,8 +7,14 @@ kotlin {
     android {
         compilations.all {
             kotlinOptions {
-                jvmTarget = "1.8"
+                jvmTarget = "17"
             }
+        }
+    }
+
+    jvm("desktop"){
+        compilations.all {
+            kotlinOptions.jvmTarget = "17"
         }
     }
     

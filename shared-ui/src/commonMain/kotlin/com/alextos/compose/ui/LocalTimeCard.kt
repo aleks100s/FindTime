@@ -1,4 +1,4 @@
-package com.alextos.findtime.android.ui
+package com.alextos.compose.ui
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -18,9 +18,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.alextos.findtime.android.theme.primaryColor
-import com.alextos.findtime.android.theme.primaryDarkColor
-import com.alextos.findtime.android.theme.typography
+import com.alextos.compose.theme.primaryColor
+import com.alextos.compose.theme.primaryDarkColor
+import com.alextos.compose.theme.typography
 
 @Composable
 fun LocalTimeCard(city: String, time: String, date: String) {

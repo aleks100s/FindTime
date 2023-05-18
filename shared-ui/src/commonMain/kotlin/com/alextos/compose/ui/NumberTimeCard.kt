@@ -1,6 +1,5 @@
-package com.alextos.findtime.android.ui
+package com.alextos.compose.ui
 
-import android.widget.NumberPicker
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer

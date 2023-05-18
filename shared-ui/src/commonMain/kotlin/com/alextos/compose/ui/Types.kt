@@ -1,4 +1,4 @@
-package com.alextos.findtime.android.ui
+package com.alextos.compose.ui
 
 import androidx.compose.runtime.Composable
 

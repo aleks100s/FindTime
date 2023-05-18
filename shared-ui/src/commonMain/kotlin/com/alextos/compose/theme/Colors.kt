@@ -1,4 +1,4 @@
-package com.alextos.findtime.android.theme
+package com.alextos.compose.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -1,4 +1,4 @@
-package com.alextos.findtime.android.ui
+package com.alextos.compose.ui
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.background

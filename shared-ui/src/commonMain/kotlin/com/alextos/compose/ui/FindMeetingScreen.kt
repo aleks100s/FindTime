@@ -1,4 +1,4 @@
-package com.alextos.findtime.android.ui
+package com.alextos.compose.ui
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -170,24 +170,4 @@ fun getSelectedTimeZones(
         }
     }
     return selectedTimeZones
-}
-
-@Composable
-private fun MeetingDialog(meetingHours: List<Int>, onDismiss: () -> Unit) {
-    Dialog(onDismissRequest = onDismiss) {
-        Surface(
-            shape = RoundedCornerShape(16.dp),
-            color = Color.White
-        ) {
-            LazyColumn(
-                modifier = Modifier
-                    .height(300.dp)
-                    .width(300.dp)
-            ) {
-                items(meetingHours) { hour ->
-                    Text(text = hour.toString())
-                }
-            }
-        }
-    }
 }

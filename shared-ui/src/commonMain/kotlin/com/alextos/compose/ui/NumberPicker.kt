@@ -1,4 +1,4 @@
-package com.alextos.findtime.android.ui
+package com.alextos.compose.ui
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Icon

@@ -8,8 +8,8 @@ import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.alextos.findtime.android.theme.AppTheme
-import com.alextos.findtime.android.ui.MainView
+import com.alextos.compose.theme.AppTheme
+import com.alextos.compose.ui.MainView
 import io.github.aakira.napier.DebugAntilog
 import io.github.aakira.napier.Napier
 
@@ -18,12 +18,12 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         Napier.base(DebugAntilog())
         setContent {
-            AppTheme {
+            com.alextos.compose.theme.AppTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    MainView {
+                    com.alextos.compose.ui.MainView {
                         TopAppBar(
                             title = {
                                 when (it) {
@@ -42,7 +42,7 @@ class MainActivity : ComponentActivity() {
 @Preview
 @Composable
 fun DefaultPreview() {
-    AppTheme {
-        MainView()
+    com.alextos.compose.theme.AppTheme {
+        com.alextos.compose.ui.MainView()
     }
 }

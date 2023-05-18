@@ -1,4 +1,4 @@
-package com.alextos.findtime.android.ui
+package com.alextos.compose.ui
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -113,36 +113,4 @@ fun MainView(actionBarFun: topBarFun = { emptyComposable() }) {
             1 -> FindMeetingScreen(timezoneStrings = currentTimezoneStrings)
         }
     }
-}
-
-@Composable
-private fun AddTimeZoneDialog(onDismiss: () -> Unit, onAdd: (String) -> Unit) {
-    val timezones = TimeZoneHelperImpl().getTimeZoneStrings()
-    Dialog(onDismissRequest = onDismiss) {
-        Surface(
-            shape = RoundedCornerShape(16.dp),
-            color = Color.White
-        ) {
-            LazyColumn(
-                modifier = Modifier
-                    .height(300.dp)
-                    .width(300.dp)
-            ) {
-                items(timezones) { timezone ->
-                    TimeZoneItem(timezone = timezone, onClick = onAdd)
-                }
-            }
-        }
-    }
-}
-
-@Composable
-private fun TimeZoneItem(timezone: String, onClick: (String) -> Unit) {
-    Text(
-        text = timezone,
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(8.dp)
-            .clickable { onClick(timezone) }
-    )
 }
